@@ -1,0 +1,50 @@
+* {
+  /*border: 1px solid red;*/
+}
+.top-margin {
+  margin-top: 30px;
+}
+.bottom-margin {
+  margin-bottom: 30px;
+}
+.br-bar {
+  border: 0;
+  height: 1px;
+  background: #333;
+}
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+nav .img-responsive {             /* NOTE: IMPORTANT!!! Need to add vertical centering!!! */
+  width: 45px;
+  height: 45px;
+}
+.carousel-section {
+  max-width: 1100px;
+  margin: auto;
+}
+.carousel-section .container {
+  max-width: 1000px;
+  margin: 20px auto;
+}
+.carousel {
+  background-color: #fff;
+}
+.carousel img {
+  margin: auto;
+}
+.tabs-section {
+  /*margin: 45px auto;*/
+  padding: 0 20px;
+}
+.tabs-section .container {
+  max-width: 800px;
+  width: 100%;
+  padding: 45px 25px;
+  border: 1px solid #222;
+  border-radius: 20px;
+}
+.modal-section .container {
+  max-width: 800px;
+}
