@@ -1,0 +1,34 @@
+{
+  "name": "ninja_koder-what_am_i_doin",
+  "version": "1.0.0",
+  "description": "What am I doin file?",
+  "main": "index.js",
+  "scripts": {
+    "test": "ninja_test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninj4koder/Bootstrap-JS.git"
+  },
+  "keywords": [
+    "Still",
+    "don't",
+    "know",
+    "what",
+    "am",
+    "I",
+    "doin..."
+  ],
+  "author": "ninja_koder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ninj4koder/Bootstrap-JS/issues"
+  },
+  "homepage": "https://github.com/ninj4koder/Bootstrap-JS#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
