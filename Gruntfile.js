@@ -14,24 +14,24 @@ module.exports = function(grunt) {
     },
 
     imagemin: {
-        dynamic: {
-            files: [{
-                expand: true,
-                cwd: 'images/',
-                src: ['**/*.{png,jpg,gif}'],
-                dest: 'images/build/'
-            }]
-        }
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'images/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'images/build/'
+        }]
+      }
     },
 
     watch: {
-        scripts: {
-            files: ['sass/*.sass'],
-            tasks: ['sass'],
-            options: {
-                spawn: false,
-            },
-        }
+      scripts: {
+        files: ['sass/*.sass'],
+        tasks: ['sass'],
+        options: {
+          spawn: false,
+        },
+      }
     }
 
   });
