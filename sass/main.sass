@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css?family=Fascinate|Open+Sans:400,800')
+
+$main-color: #313332
+$white-color: #fff
+$black-color: #000
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+=translate($value_1,$value_2)
+  -webkit-transform:  translate($value_1,$value_2)
+  -ms-transform:      translate($value_1,$value_2)
+  transform:          translate($value_1,$value_2)
+
+.clearfix
+  content: ""
+  display: table
+  clear: both
+
+.picture-setting
+  background-size: cover
+  background-position: center
+  position: relative
+
+.small-padding
+  padding: 10px
+
+*
+  box-sizing: border-box
+
+body
+  margin: 0 auto
+  font-family: 'Open Sans', sans-serif
+  color: $main-color
+
+.container
+  width: 100%
+  max-width: 1200px
+  margin: auto
+
+h1, h3, h4
+  text-transform: uppercase
+  font-weight: 800
+
+.picture-section p, footer p
+  text-align: left
+
+.align-center
+  text-align: center
+
+/* header section */
+header
+  background-color: $main-color
+
+  >nav
+    >img
+      padding: 10px 0
+    >ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+      li
+        >a
+          line-height: 50px
+          padding: 0 20px
+          display: block
+          color: $white-color
+          text-decoration: none
+          text-transform: uppercase
+
+nav
+  &::before,
+  &::after
+    @extend .clearfix
+
+/*   hero section   */
+.hero
+  @extend .picture-setting
+  background-image: url('https://static.pexels.com/photos/257897/pexels-photo-257897.jpeg')
+  min-height: 60vh
+  width: 100%
+  background-attachment: fixed
+
+  &::before,
+  &::after
+    @extend .clearfix
+
+.slogan
+  position: absolute
+  top: 50%
+  right: 0
+  transform: translateY(-50%)
+  background-color: rgba(0, 0, 0, 0.5)
+  max-width: 800px
+  color: $white-color
+  text-transform: uppercase
+  padding: 0 25px
+  padding-right: 50px
+
+  h1
+    line-height: 30%
+
+  small
+    font-weight: 400
+
+.dot
+  +border-radius(50%)
+  height: 30px
+  width: 30px
+  background-color: #807F7D
+  margin: 20px
+  display: inline-block
+
+.white-dot
+  background-color: $white-color
+
+.dots
+  position: absolute
+  bottom: 0
+  width: 100%
+  text-align: center
+
+/*   benefits section   */
+.benefits
+  .container
+    margin-top: 3%
+
+  i.fa
+    +border-radius(15%)
+    background-color: $main-color
+    font-size: 40px
+    color: $white-color
+    padding: 20px
+
+/*   gallery section   */
+.gallery
+  i.fa
+    +border-radius(20%)
+    margin: 10px 5px
+    font-size: 20px
+    padding: 10px
+    color: #303131
+    background-color: #FFFFF2
+
+  [class*='col-']
+    padding-top: 16.66%
+    position: relative
+
+  .layer
+    opacity: 0
+    position: absolute
+    left: 0
+    top: 0
+    background-color: rgba(0, 0, 0, 0.5)
+    width: 100%
+    padding-top: 100%
+    transition: .45s
+
+  .col-m-4 .layer
+    padding-top: 50%
+
+  .layer-icons
+    opacity: 1
+    position: absolute
+    top: 50%
+    left: 50%
+    +translate(-50%,-50%)
+
+.gallery-image
+  background-image: url('http://www.lorempixel.com/400/400/city')
+  background-position: center
+  background-size: cover
+  height: 100%
+  position: relative
+
+/*   Team section   */
+.team
+  .image
+    +border-radius(50%)
+    background-image: url('http://pipsum.com/200x200.jpg')
+    padding-top: 25%
+    background-size: cover
+    position: relative
+    float: left
+
+  .layer
+    +border-radius(50%)
+    position: absolute
+    left: 0
+    top: 0
+    background-color: rgba(0,0,0,0.5)
+    width: 100%
+    padding-top: 100%
+    opacity: 0
+
+  .position
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    width: 100%
+
+    h3
+      color: #aaa
+      font-size: 2vw
+      text-align: center
+
+/*   picture-section section   */
+.picture-section
+  color: $white-color
+  background-color: $main-color
+
+  .table-hack
+    display: table
+
+.table-hack
+  >div
+    display: table-cell
+    float: none
+
+.picture-col
+  &::before,
+  &::after
+    @extend .clearfix
+
+.picture-col
+  vertical-align: bottom
+
+  img
+    width: 100%
+    float: left
+
+/*   stats section   */
+.stats
+  .image
+    font-family: Fascinate, cursive
+    margin-bottom: 5px
+    font-size: 4em
+
+  h4
+    margin-top: 5px
+    color: #01CBE5
+
+/*   footer section   */
+.notes
+  background-color: $main-color
+  color: $white-color
+  text-align: left
+
+  p
+    margin: 0
+    padding: 0
+
+.note
+  padding: 0 !important
+
+
+.copyrights
+  background-color: $black-color
+  color: $white-color
+
+footer
+  i.fa
+    background-color: #01CBE5
+    font-size: 25px
+    color: $white-color
+    padding: 10px
+    margin-right: 6px
+
+  h3
+    margin: 5px
+    text-align: left
+    display: inline-block
+
+  .line
+    +border-radius(10px)
+    display: inline-block
+    width: 70px
+    height: 3px
+    margin-left: 15px
+    vertical-align: super
+    background-color: $white-color
+
+.grid
+  text-align: center
+
+.row
+  &::before,
+  &::after
+    @extend .clearfix
+
+[class*='col-s']
+  float: left
+  min-height: 1px
+
+/* For mobiles */
+@media (max-width: 767px)
+
+  p
+    font-size: 17px
+
+  header
+    height: 100%
+    text-align: center
+
+    >nav
+      >ul
+        >li
+          >a
+            font-size: 22px
+            padding: 22px
+            line-height: 22px
+
+  h1
+    font-size: 25px
+
+  h3
+    font-size: 22px
+
+  h4
+    font-size: 19px
+
+  .team
+    h4
+      font-size: 25px
+
+  .gallery
+    [class*='col-']
+      margin-bottom: 4%
+      padding-top: 50%
+
+    .layer-icons
+      width: 100%
+
+      a
+        height: 100%
+        display: inline-block
+        padding: 20px
+
+  .team
+    .col-s-8
+      float: none
+      margin: auto
+
+    .image
+      padding-top: 100%
+      width: 100%
+
+    .position
+      h3
+        font-size: 2em
+        color: $white-color
+
+  .table-hack
+    >div
+      display: block
+
+  .notes
+    .s-size-center
+      text-align: center
+
+  .col-s-1
+    width: 8.33%
+  .col-s-2
+    width: 16.66%
+  .col-s-3
+    width: 25%
+  .col-s-4
+    width: 33.33%
+  .col-s-5
+    width: 41.66%
+  .col-s-6
+    width: 50%
+  .col-s-7
+    width: 58.33%
+  .col-s-8
+    width: 66.66%
+  .col-s-9
+    width: 75%
+  .col-s-10
+    width: 83.33%
+  .col-s-11
+    width: 91.66%
+  .col-s-12
+    width: 100%
+
+/* NOTE: For tablets */
+@media (min-width: 768px)
+
+  header
+    >nav
+      >ul
+        float: right
+        >li
+          display: inline-block
+
+  h1
+    font-size: 30px
+
+  h3
+    font-size: 25px
+
+  h4
+    font-size: 20px
+
+  .benefits
+    i.fa
+      +border-radius(20%)
+      font-size: 70px
+      padding: 20px
+
+  /*   gallery section   */
+  .gallery
+    i.fa
+      margin: 15px 10px
+      font-size: 25px
+      padding: 5px
+
+  .gallery
+    .layer-icons
+      display: block
+      width: 100%
+
+  /*   Team section   */
+  .team
+    .image
+      padding-top: 100%
+      width: 100%
+
+    .col-m-3
+      padding: 10px
+
+    .position
+      h3
+        color: $white-color
+        font-size: 25px
+
+  /*   picture-section section   */
+  .picture-section
+    height: 100%
+
+  .col-m-1
+    width: 8.33%
+  .col-m-2
+    width: 16.66%
+  .col-m-3
+    width: 25%
+  .col-m-4
+    width: 33.33%
+  .col-m-5
+    width: 41.66%
+  .col-m-6
+    width: 50%
+  .col-m-7
+    width: 58.33%
+  .col-m-8
+    width: 66.66%
+  .col-m-9
+    width: 75%
+  .col-m-10
+    width: 83.33%
+  .col-m-11
+    width: 91.66%
+  .col-m-12
+    width: 100%
+
+@media (min-width: 1200px)
+
+  a
+    &:hover
+      color: #01CBE5
+
+  .benefits
+    .col-l-4
+      &:hover
+        .fa
+          background-color: #00C7E8
+          color: $white-color
+
+        h4
+          color: #00C7E8
+
+  .gallery
+    .layer-icons
+      display: none
+
+    [class*='col-']
+      &:hover
+        .layer
+          opacity: 1
+
+        .layer-icons
+          display: inline-block
+          position: absolute
+          top: 50%
+          left: 50%
+          +translate(-50%,-50%)
+
+  .team
+    .layer,
+    .position
+      opacity: 0
+
+  .team
+    .image
+      &:hover
+        .layer,
+        .position
+          opacity: 1
+          transition: .45s
+
+  .col-lg-1
+    width: 8.33%
+  .col-lg-2
+    width: 16.66%
+  .col-lg-3
+    width: 25%
+  .col-lg-4
+    width: 33.33%
+  .col-lg-5
+    width: 41.66%
+  .col-lg-6
+    width: 50%
+  .col-lg-7
+    width: 58.33%
+  .col-lg-8
+    width: 66.66%
+  .col-lg-9
+    width: 75%
+  .col-lg-10
+    width: 83.33%
+  .col-lg-11
+    width: 91.66%
+  .col-lg-12
+    width: 100%
+
+  /* offsets */
+
+  .col-lg-offset-0
+    margin-left: 0
+  .col-lg-offset-1
+    margin-left: 8.33%
+  .col-lg-offset-2
+    margin-left: 16.66%
+  .col-lg-offset-3
+    margin-left: 25%
+  .col-lg-offset-4
+    margin-left: 33.33%
+  .col-lg-offset-5
+    margin-left: 41.66%
+  .col-lg-offset-6
+    margin-left: 50%
+  .col-lg-offset-7
+    margin-left: 58.33%
+  .col-lg-offset-8
+    margin-left: 66.66%
+  .col-lg-offset-9
+    margin-left: 75%
+  .col-lg-offset-10
+    margin-left: 83.33%
+  .col-lg-offset-11
+    margin-left: 91.66%
